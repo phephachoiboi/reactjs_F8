@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewpoint">
+        <title>React Create Element</title>
+        <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>  
+    </head>
+
+    <body>
+        <div id="root1"></div>
+        <div id="root2"></div>
+        <!-- <script>
+            //React
+            const postReact = React.createElement(
+                'div',
+                {className : 'post-item'},
+                React.createElement('h2', {title : 'Hoc react tai f8'}, 'hoc reactjs'),
+                React.createElement('p', null, 'hoc nang cao'),
+            )
+            console.log(postReact);
+
+            //Get root element
+            const root = document.getElementById('root')
+
+            //React-DOM -> render UI
+            ReactDOM.render(postReact, root)
+        </script> -->
+
+        <script>
+            const hReact = React.createElement(
+                'h1',
+                {title : 'Hello', className : 'heading',},
+                'Hello guys'
+            )
+            console.log(hReact);
+
+            //Get root element
+            const root1 = document.getElementById('root1')
+            //React-DOM -> render UI
+            ReactDOM.render(hReact,root1)
+
+            const ulReact = React.createElement('ul',null,
+            React.createElement('li',null,'JS'),
+            React.createElement('li',null,'ReactJS')
+            )
+
+            const root2 = document.getElementById('root2')
+            ReactDOM.render(ulReact,root2)
+        </script>
+    </body>
+</html>

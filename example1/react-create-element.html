@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewpoint">
+    <title>React Create Element</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+
+</head>
+
+<body>
+    <!-- <script>
+        //DOM
+        const h1DOM = document.createElement('h1')
+        h1DOM.title = 'JHello'
+        h1DOM.className = 'Heading'
+        h1DOM.innerText = 'Hello guys'
+        document.body.appendChild(h1DOM)
+
+        //React
+        //React.createElement(type, props, children, n)
+        const h1React = React.createElement('h1', {
+            title: 'Hello',
+            className: 'Heading'
+        }, 'Hello guys')
+        console.dir(h1DOM);
+        console.log(h1React);
+    </script> -->
+
+    <!-- <script>
+        //DOM
+        const ulDOM = document.createElement('ul')
+
+        const liDOM1 = document.createElement('li')
+        liDOM1.innerText = 'Javascript'
+
+        const liDOM2 = document.createElement('il')
+        liDOM2.innerText = 'ReactJs'
+
+        ulDOM.appendChild(liDOM1)
+        ulDOM.appendChild(liDOM2)
+
+        document.body.appendChild(ulDOM)
+        
+        //React
+        const ulReact = React.createElement(
+            'ul',
+            null,
+            React.createElement('li',null,'Javscript'),
+            React.createElement('li',null,'ReactJs'),
+        )
+
+        console.log(ulReact);
+    </script> -->
+
+    <!-- <script>
+        //DOM
+        const divDOM = document.createElement('div')
+        divDOM.innerText = 'post-item'
+        const divDOM1 = document.createElement('h2')
+        divDOM1.innerText = 'Hoc di oan'
+        divDOM1.title = 'Hoc react'
+        const divDOM2 = document.createElement('p')
+        divDOM2.innerText = 'Co ban den nang cao'
+
+        divDOM.appendChild(divDOM1)
+        divDOM.appendChild(divDOM2)
+        document.body.appendChild(divDOM)
+
+        //React
+        const divReact = React.createElement(
+            'div',
+            {
+                className: 'post-item'
+            },
+            React.createElement('h2', { title: "Hoc react" }, 'Hoc di oan'),
+            React.createElement('p', null, 'Co ban den nang cao'),
+        )
+        console.log(divReact);
+    </script> -->
+</body>
+
+</html>

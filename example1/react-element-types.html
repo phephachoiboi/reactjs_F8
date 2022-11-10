@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewpoint">
+        <title>React Create Element</title>
+        <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>  
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="app"></div>
+        <script type="text/babel">
+            // function Header(){
+            //     return (
+            //         <div className="header">Heading</div>
+            //     )               
+            // }
+            // class Content extends React.Component {
+            //     render(){
+            //         return(
+            //             <div className="content">New Content</div>
+            //         )
+            //     }
+            // }
+
+            // const app = (
+            //         <div className="wrapper">
+            //             <Header/>
+            //             <Content/>
+            //             <div className="footer">Footer</div>
+            //         </div>
+            // )
+
+            // const app = React.createElement(
+            //     'div',
+            //     {className : 'wrapper'},
+            //     React.createElement(Header,null),
+            //     React.createElement(Content,null)
+            // )
+
+            function PostItem(){
+                return (
+                    <div className="post-item">
+                        <img src="https://files.readme.io/03201af-cdn-flow.jpg" alt="Content delivery networks"/>
+                        <h2 className="post-title">Content delivery networks</h2>
+                    </div>
+                )
+            }
+
+            class PostItem1 extends React.Component{
+                render(){
+                    return(
+                        <div className="post-item1">
+                        <img src="https://files.readme.io/d7bcdcf-cdn_map.png" alt="Edge computing"/>
+                        <h2 className="post-title">Edge computing</h2>
+                    </div>
+                    )
+                }
+            }
+            const app = (
+                <div className="post-list">
+                    <PostItem/>
+                    <PostItem1/>
+                </div>
+            )
+            
+            ReactDOM.render(app,document.getElementById('app'))
+            console.log(app);
+                
+        </script>
+    </body>
+</html>

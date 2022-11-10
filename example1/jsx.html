@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewpoint">
+        <title>React Create Element</title>
+        <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>  
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <!-- <script type="text/babel">
+            // const ul = React.createElement(
+            //     'ul',
+            //     null,
+            //     React.createElement('li',null,'JS'),
+            //     React.createElement('li',null,'React')
+            // )
+
+            const reactCourse = 'React hoc bai'
+            const ul = <ul>
+                <li>Javascript</li>
+                <li>ReactJs</li>
+            </ul>
+            console.log(ul);
+            ReactDOM.render(ul, document.getElementById('root'))
+        </script> -->
+        <script type="text/babel">
+            const courses = [
+                {name : 'HTML, CSS'},
+                {name : 'RWD'},
+                {name : 'JS'}
+            ]
+
+            const ul = 
+            <ul>
+                {courses.map((course, index) =>
+                    <li key = {index}>{course.name}</li>
+                )}
+            </ul> 
+            // <ul>
+            //     {courses.map(function(course){
+            //         return <li>{course.name}</li>
+            //     })}
+            // </ul> 
+            console.log(ul);
+            ReactDOM.render(ul,document.getElementById('root'))
+        </script>
+    </body>
+</html>
