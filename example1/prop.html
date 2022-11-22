@@ -10,6 +10,49 @@
         <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     </head>
     <body>
-        
+        <div id="app"></div>
+        <script type="text/babel">
+
+            function PostItem(props){
+                console.log(props);
+                return(
+                    <div className="post-item">
+                        <img src={props.image}
+                        alt={props.title}
+                        />
+                        <h2 className="post-title">{props.description}</h2>
+                        <p className="post-desc">{props.title}</p>
+                    </div>
+                )
+            }
+
+            // class PostItem1 extends React.Component{
+            //     render(){
+            //         return(
+            //             <div className="post-item1">
+            //             <img src="https://files.readme.io/d7bcdcf-cdn_map.png" alt="Edge computing"/>
+            //             <h2 className="post-title">Edge computing</h2>
+            //         </div>
+            //         )
+            //     }
+            // }
+
+            function App(){
+                return(
+                    <div id="wrapper">
+                        <PostItem 
+                        title="Content delivery networks"
+                        image="https://files.readme.io/03201af-cdn-flow.jpg"
+                        description="Popular transit network data"
+                        />
+                      
+                    </div>
+                )
+            }
+
+            //console.log(<PostItem title="title-test"/>);
+            ReactDOM.render(<App/>,document.getElementById('app'))
+            //console.app(app);
+        </script>
     </body>
 </html>
